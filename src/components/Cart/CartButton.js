@@ -6,7 +6,7 @@ const CartButton = (props) => {
 
   const dispatch = useDispatch();
   //useSelector read the totalQuantity inside the store
-  const cartQuantity = useSelector(state=>state.cart.totalQuantity);
+  const cartQuantity = useSelector((state)=>state.cart.totalQuantity);
 
   const toggleCartHanldler = () =>{
     dispatch(uiActions.toggle());
