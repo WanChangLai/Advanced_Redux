@@ -5,7 +5,7 @@ import Layout from './components/Layout/Layout';
 import Products from './components/Shop/Products';
 
 function App() {
-// this is from the store
+// the state is from the store
   const showCart = useSelector(state=>state.ui.cartIsVisible);
 
   return (
