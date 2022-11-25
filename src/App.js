@@ -28,7 +28,10 @@ function App() {
       return;
     }
 
-    dispatch(sendCartData(cart));
+    //check whether the card is changed
+    if(cart.changed){
+      dispatch(sendCartData(cart));
+    };
   },[cart,dispatch]);
 
   return (
