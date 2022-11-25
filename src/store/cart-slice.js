@@ -9,6 +9,7 @@ const cartSlice = createSlice({
     reducers : {
         addItemToCart(state,action){
             const newItem = action.payload;
+            //payload means extra 
             const existingItem = state.items.find ( (item) => item.id === newItem.id );
             state.totalQuantity ++;
             if(!existingItem) {
@@ -29,6 +30,7 @@ const cartSlice = createSlice({
             const existingItem = state.items.find ( (item) => item.id === id);
             state.totalQuantity--;
             if (existingItem.quantity === 1){
+                //filter out the item which has a quantity of 1
                 state.items = state.items.filter( (item) => item.id !== id);
             } else {
                 existingItem.quantity--;
